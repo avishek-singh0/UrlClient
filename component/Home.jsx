@@ -8,7 +8,7 @@ export default function Home() {
 
   const collectData = async(e)=>{
     e.preventDefault(); 
-    const response = await fetch('http://localhost:3001/url',{
+    const response = await fetch('https://urls-2h48.onrender.com/url',{
       method:"POST",
       body:JSON.stringify({url}),
       headers:{
