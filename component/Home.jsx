@@ -35,7 +35,7 @@ export default function Home() {
           Paste a long URL
           </label>
           <input
-            className="w-96 p-6  h-6  border rounded-md focus:outline-none focus:border-blue-500"
+            className="w-96 p-6  h-6  border rounded-md focus:outline-none focus:border-blue-500 text-neutral-950 "
             type="text"
             value={url}
             onChange={(e)=>{seturl(e.target.value)}}
