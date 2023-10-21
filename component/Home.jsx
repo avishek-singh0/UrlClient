@@ -16,7 +16,7 @@ export default function Home() {
     }  })
     const data = await response.json();
     console.log(data.shortid)
-    setShortenedUrl(`https://urls-2h48.onrender.com/url/${data.shortid}`); // Update shortened URL
+    setShortenedUrl(`https://urls-2h48.onrender.com/${data.shortid}`); // Update shortened URL
     console.log(data);
     console.warn(url);
   
