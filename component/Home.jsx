@@ -1,20 +1,29 @@
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 export default function Home() {
 
   const [url ,seturl] =  useState("");
   const [shortenedUrl, setShortenedUrl] = useState('');
   const token = localStorage.getItem('accessToken');
+  const navigate = useNavigate()
+
+
       useEffect(()=>{
+        // if (!token) {
+        //   // Handle redirection here or set a state to indicate redirection
+        //   // For example:
+        //   window.location.href = '/log'; // Redirects to '/log' if token is missing
+        //   return; // Prevent further execution of the fetch logic
+        // }
+
+  
         if (!token) {
-          // Handle redirection here or set a state to indicate redirection
-          // For example:
-          window.location.href = '/log'; // Redirects to '/log' if token is missing
-          return; // Prevent further execution of the fetch logic
+          // Redirect to login page if token is missing
+         navigate('/log');
+          return; // Stop execution if token is missing
         }
-
-
 
       })
             
