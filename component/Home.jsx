@@ -83,7 +83,7 @@ export default function Home() {
             Paste a long URL
           </label>
           <input
-            className="w-full p-3 border rounded-md focus:outline-none focus:border-blue-500 text-neutral-950"
+            className="w-full p-3 border rounded-md focus:outline-none focus:border-blue-500 text-white "
             type="text"
             value={url}
             onChange={(e) => { seturl(e.target.value) }}
@@ -106,7 +106,7 @@ export default function Home() {
 
         {shortenedUrl && (
           <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-white text-sm font-bold mb-2">
               Shortened URL:
             </label>
             <a
